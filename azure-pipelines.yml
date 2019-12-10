@@ -9,7 +9,10 @@
 
 trigger:
 - master
-
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: 'print("This line will be printed.")'
 pool:
   vmImage: 'ubuntu-latest'
 
